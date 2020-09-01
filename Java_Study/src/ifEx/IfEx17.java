@@ -23,9 +23,8 @@ public class IfEx17 {
 		
 		int rNum = ran.nextInt(50) + 1;
 		
-		int x = rNum / 10;
-		
-		int y = rNum % 10;
+		int x = rNum / 10;		// 십의 자리 판별
+		int y = rNum % 10;		// 일의 자리 판별
 		
 		int cnt = 0;
 		
@@ -36,10 +35,8 @@ public class IfEx17 {
 			cnt += 1;
 		}
 		
-		System.out.println("문제 : " + rNum);
-		
 		if(cnt == 2) {
-			System.out.println("짝짝");
+			System.out.println("짝작");
 		}
 		else if(cnt == 1) {
 			System.out.println("짝");
@@ -47,6 +44,7 @@ public class IfEx17 {
 		else {
 			System.out.println(rNum);
 		}
+		
 			
 			
 

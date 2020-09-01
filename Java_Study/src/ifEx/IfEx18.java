@@ -24,18 +24,20 @@ public class IfEx18 {
 		System.out.print("이용할 정거장 수를 입력하세요 : ");
 		int station = scan.nextInt();
 		
-		int fee = 0;
+		int fee = 500;
 		
 		if(1 <= station && station <= 5) {
 			fee = 500;
-		}else if(6 <= station && station <= 10) {
+		}
+		else if(6 <= station && station <= 10) {
 			fee = 600;
-		}else {
+		}
+		else {
 			int add = station - 10;
-			if(station % 2 == 0) {
-				add += 1;	// 홀수일때는 짝수로 보정해준다.
+			if(station % 2 == 1) {
+				add += 1;		// 홀수일때는 짝수로 보정해준다.
 			}
-			fee = 600 + add/2*50;
+			fee = 600 + add / 2 * 50;
 		}
 		System.out.println("요금 = " + fee + "원");
 	}
