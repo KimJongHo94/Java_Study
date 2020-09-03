@@ -34,12 +34,15 @@ public class IfEx18 {
 		}
 		else {
 			int add = station - 10;
+			
 			if(station % 2 == 1) {
-				add += 1;		// 홀수일때는 짝수로 보정해준다.
+				add += 1;
 			}
 			fee = 600 + add / 2 * 50;
 		}
+		
 		System.out.println("요금 = " + fee + "원");
+		
 	}
 
 }

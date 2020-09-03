@@ -23,8 +23,8 @@ public class IfEx17 {
 		
 		int rNum = ran.nextInt(50) + 1;
 		
-		int x = rNum / 10;		// ½ÊÀÇ ÀÚ¸® ÆÇº°
-		int y = rNum % 10;		// ÀÏÀÇ ÀÚ¸® ÆÇº°
+		int x = rNum / 10;
+		int y = rNum % 10;
 		
 		int cnt = 0;
 		
@@ -36,7 +36,7 @@ public class IfEx17 {
 		}
 		
 		if(cnt == 2) {
-			System.out.println("Â¦ÀÛ");
+			System.out.println("Â¦Â¦");
 		}
 		else if(cnt == 1) {
 			System.out.println("Â¦");
@@ -44,8 +44,6 @@ public class IfEx17 {
 		else {
 			System.out.println(rNum);
 		}
-		
-			
 			
 
 	}
