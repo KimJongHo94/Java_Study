@@ -41,7 +41,7 @@ public class WhileEx10 {
 		while(run) {
 			
 			System.out.println("1.로그인");
-			System.out.println("2. 로그아웃");
+			System.out.println("2.로그아웃");
 			System.out.println("3.입금");
 			System.out.println("4.출금");
 			System.out.println("5.이체");
@@ -74,11 +74,132 @@ public class WhileEx10 {
 					
 				}
 			}
-			else if(sel == 2) {}
-			else if(sel == 3) {}
-			else if(sel == 4) {}
-			else if(sel == 5) {}
-			else if(sel == 6) {}
+			else if(sel == 2) {
+				if(log != -1) {
+					log = -1;
+					System.out.println("로그아웃 되었습니다.");
+				}
+				else {
+					System.out.println("로그인 상태가 아닙니다.");
+				}
+			}
+			else if(sel == 3) {
+				if(log == 1) {
+					
+					System.out.print("입금할 금액 입력 : ");
+					int money = scan.nextInt();
+					
+					dbMoney1 += money;
+					System.out.println("입금이 완료되었습니다.");
+					
+				}
+				else if(log == 2) {
+					
+					System.out.print("입금할 금액 입력 : ");
+					int money = scan.nextInt();
+					
+					dbMoney2 += money;
+					System.out.println("입금이 완료되었습니다.");
+				}
+				else {
+					System.out.println("로그인 상태가 아닙니다.");
+				}
+			}
+			else if(sel == 4) {
+				if(log == 1) {
+					
+					System.out.print("출금할 금액 입력 : ");
+					int money = scan.nextInt();
+					
+					if(money <= dbMoney1) {
+						dbMoney1 -= money;
+						System.out.println("출금이 완료되었습니다.");
+					}
+					else {
+						System.out.println("잔액이 부족합니다.");
+					}
+					
+				}
+				else if(log == 2) {
+					
+					System.out.print("출금할 금액 입력 : ");
+					int money = scan.nextInt();
+					
+					if(money <= dbMoney2) {
+						dbMoney2 -= money;
+						System.out.println("출금이 완료되었습니다.");
+					}
+					else {
+						System.out.println("잔액이 부족합니다.");
+					}
+				}
+				else {
+					System.out.println("로그인 상태가 아닙니다.");
+				}
+			}
+			else if(sel == 5) {
+				if(log == 1) {
+					
+					System.out.print("이체할 계좌번호 입력 : ");
+					int transAcc = scan.nextInt();
+					
+					if(transAcc == dbAcc2) {
+						System.out.print("이체할 금액 입력 : ");
+						int money = scan.nextInt();
+						
+						if(money <= dbMoney1) {
+							dbMoney1 -= money;
+							dbMoney2 += money;
+							System.out.println("이체가 완료되었습니다.");
+						}
+						else {
+							System.out.println("잔액이 부족합니다.");
+						}
+					}
+					else {
+						System.out.println("계좌번호를 확인해주세요.");
+					}
+				}
+				else if(log == 2) {
+					
+					System.out.print("이체할 계좌번호 입력 : ");
+					int transAcc = scan.nextInt();
+					
+					if(transAcc == dbAcc1) {
+						System.out.println("이체할 금액 입력 : ");
+						int money = scan.nextInt();
+						
+						if(money <= dbMoney2) {
+							dbMoney1 += money;
+							dbMoney2 -= money;
+							System.out.println("이체가 완료되었습니다.");
+						}
+						else {
+							System.out.println("잔액이 부족합니다.");
+						}
+						
+					}
+					else {
+						System.out.println("계좌번호를 확인해주세요.");
+					}
+					
+				}
+				else {
+					System.out.println("로그인 상태가 아닙니다.");
+				}
+			}
+			else if(sel == 6) {
+				
+				if(log == 1) {
+					System.out.println("dbAcc1 잔액 = " + dbMoney1 + "원") ;
+				}
+				else if(log == 2) {
+					System.out.println("dbAcc2 잔액 = " + dbMoney2 + "원");
+				}
+				else {
+					System.out.println("로그인 상태가 아닙니다.");
+				}
+			}
 			else if(sel == 0) {
 				run = false;
 				System.out.println("프로그램 종료");
