@@ -20,7 +20,26 @@ public class WhileEx13 {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-
+		
+		System.out.print("정수 입력 : ");
+		int num = scan.nextInt();
+		
+		int cnt = 0;
+		
+		int i = 1;
+		
+		while(i <= num) {
+			if(num % i == 0) {
+				cnt += 1;
+			}
+			i += 1;
+		}
+		if(cnt == 2) {
+			System.out.println("소수이다.");
+		}
+		else {
+			System.out.println("소수가 아니다.");
+		}
 	}
 
 }
