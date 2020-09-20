@@ -12,15 +12,16 @@ public class ArrayEx13 {
 		int[] arr = {44, 11, 29, 24, 76};
 		int[] temp = null;
 		
-		int cnt = 0;
+		int size = 0;
 		
 		for(int i = 0; i < arr.length; i++) {
 			if(arr[i] % 4 == 0) {
-				cnt += 1;
+				size += 1;
 			}
 		}
 		
-		temp = new int[cnt];
+		temp = new int[size];
+		// temp = new int[3];
 		
 		int j = 0;
 		

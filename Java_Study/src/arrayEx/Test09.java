@@ -5,21 +5,13 @@ public class Test09 {
 	public static void main(String[] args) {
 		
 		int[] arr = {10, 20, 30, 40, 50};
-		int temp4[] = new int[5];
+		int[] temp4 = new int[5];
 		
 		// 문제1) arr의 값을 temp4에 거꾸로 복사후 출력
-		// 예) temp4 ==> {50, 40, 30, 20, 10};
-		// 힌트 : 아래
-		int i = 0;
-		int back = 4;
-		temp4[i] = arr[back];
-		
-		for(i = 0; i < arr.length; i++) {
-			temp4[i] = arr[back - i];
+		for(int i = 0; i < temp4.length; i++) {
+			temp4[i] = arr[4 - i];
 			System.out.print(temp4[i] + " ");
 		}
-		System.out.println();
-
 	}
 
 }

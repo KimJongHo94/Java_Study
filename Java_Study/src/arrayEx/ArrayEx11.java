@@ -30,23 +30,30 @@ public class ArrayEx11 {
 		int[] arr   = new int[5];
 		
 		for(int i = 0; i < arr.length; i++) {
-			int r = ran.nextInt(5);
-			arr[i] = r;
 			
+			int r = ran.nextInt(5);
+	
+			arr[i] = r;
+			 
 			if(check[r] == 0) {
 				check[r] = 1;
 			}
 			else {
-				--i;
+				i--;
 			}
 		}
 		
+		System.out.print("check = ");
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(check[i] + " ");
+		}
+		System.out.println();
+		
+		System.out.print("arr = ");
 		for(int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
 		
-		
-
 	}
 
 }
