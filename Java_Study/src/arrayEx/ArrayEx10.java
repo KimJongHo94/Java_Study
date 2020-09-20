@@ -15,7 +15,7 @@ public class ArrayEx10 {
 		Scanner scan = new Scanner(System.in);
 		Random ran = new Random();
 		
-		int[] lotto = {0, 0, 7, 7, 7, 0, 0};
+		int[] lotto = {0, 0, 7, 7, 7, 0, 0, 0};
 
 		int cnt = 0;
 		
@@ -29,7 +29,7 @@ public class ArrayEx10 {
 			
 			if(sel == 1) {
 				
-				for(int i = 0; i < lotto.length - 2; i++) {
+				for(int i = 0; i < 7 - 2; i++) {
 					if(lotto[i] == 7 && lotto[i + 1] == 7 && lotto[i + 2] == 7) {
 						System.out.println("´çÃ·");
 						i = lotto.length - 2;

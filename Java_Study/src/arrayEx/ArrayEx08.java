@@ -60,10 +60,17 @@ public class ArrayEx08 {
 		}
 		System.out.println();
 		System.out.println("성적 : " + score + "점");
-		
-		
-		
-		
+			
 	}
 
 }
+
+/*
+실행 결과
+
+answer = [ 1 3 4 2 5 ]
+hgd    = [ 3 1 4 4 3 ]
+정오표       = [ X X O X X ]
+성적 = 20점
+
+*/
