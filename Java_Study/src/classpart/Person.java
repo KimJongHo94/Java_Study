@@ -7,4 +7,6 @@ public class Person {
 	boolean isMarried;
 	int numberOfChildren;
 	
+	
+	
 }
