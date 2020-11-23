@@ -1,7 +1,7 @@
 package reference;
 
 public class Student {
-
+	
 	int studentID;
 	String studentName;
 	
@@ -32,7 +32,8 @@ public class Student {
 	public void showStudentScore()
 	{
 		int total = korea.score + math.score;
-		System.out.println(studentName + " 학생의 총점은 : " + total + "점 입니다.");
+		System.out.println(studentName + " 학생의 총점은 " + total + "점 입니다.");
+		
 	}
 	
 }
